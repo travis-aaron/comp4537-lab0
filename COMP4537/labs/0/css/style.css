@@ -1,0 +1,38 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#viewport {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	gap: 1em;
+	height: 100vh;
+}
+
+.button {
+	display: flex;
+	height: 5em;
+	width: 10em;
+	align-items: center;
+	justify-content: center;
+	transition: left 0.5s ease, top 0.5s ease;
+}
+
+#error {
+	font-style: italic;
+	color: #DC3545;
+}
+
+#correct-sequence {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	gap: 1em;
+	margin-bottom: 1em;
+}
