@@ -1,0 +1,105 @@
+* {
+	font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
+}
+
+button {
+	background-color: #4a5568;
+	border-radius: .25em;
+	color: #E8E1EF;
+	padding: .5em .75em;
+	font-weight: 500;
+	/* horizontal, vertical, blur, RGBA (black/near transparent) */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+	/* horizontal, vertical, blur, RGBA (black/near transparent) */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body {
+	background-color: #2d3748;
+}
+
+h1 {
+	display: flex;
+	justify-content: center;
+	color: #E8E1EF;
+	align-items: center;
+	padding-top: 1em;
+	text-wrap: balance;
+}
+
+
+div#nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+div#nav button {
+	margin: 2em;
+	border: 1px solid #3182ce;
+}
+
+
+textarea {
+	resize: none;
+	background-color: #2d3748;
+	border: 1px solid #E8E1EF;
+	border-radius: .25em;
+	color: #E8E1EF;
+}
+
+textarea::-webkit-scrollbar {
+	background-color: #2d3748;
+	width: .5em;
+}
+
+textarea::-webkit-scrollbar-thumb {
+	background-color: #E8E1EF;
+	border-radius: .25em;
+}
+
+
+#buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1em auto;
+	padding-left: 1.5em;
+}
+
+#buttons button {
+	margin-right: 1em;
+	border: 1px solid #3182ce;
+}
+
+
+.note-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1em 1em;
+}
+
+.note-item button {
+	margin-left: 1em;
+	border: 1px solid #E8E1EF;
+}
+
+#read-page button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2em auto;
+	border: 1px solid #3182ce;
+}
+
+.timestamp {
+	position: absolute;
+	color: #E8E1EF;
+	top: 1em;
+	right: 1em;
+}
