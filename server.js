@@ -105,6 +105,22 @@ app.get('/comp4537/labs/3/*', (req, res) => {
 	res.sendFile(path.join(__dirname, filePath));
 });
 
+// Handle files within the inclass directory
+app.get('/comp4537/labs/inclass/*', (req, res) => {
+	const filePath = req.path.replace('/comp4537/', '/COMP4537/');
+	res.sendFile(path.join(__dirname, filePath));
+});
+
+// Redirect /comp4537/labs/inclass to /comp4537/labs/inclass/
+app.get('/comp4537/labs/inclass', (req, res) => {
+	res.redirect('/comp4537/labs/inclass/');
+});
+
+// Serve the index.html file for the inclass directory
+app.get('/comp4537/labs/inclass/', (req, res) => {
+	res.sendFile(path.join(__dirname, 'COMP4537/labs/inclass/index.html'));
+});
+
 app.get('/', (req, res) => {
 	res.redirect('/comp4537/labs/1/');
 });
