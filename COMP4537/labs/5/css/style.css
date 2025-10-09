@@ -2,6 +2,14 @@
 	font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
 }
 
+a {
+	display: flex;
+	justify-content: center;
+	color: #E8E1EF;
+	align-items: center;
+	margin-bottom: 1em;
+}
+
 button {
 	background-color: #4a5568;
 	border-radius: .25em;
@@ -19,6 +27,7 @@ button:hover {
 
 body {
 	background-color: #2d3748;
+	border-radius: 1em;
 }
 
 h1 {

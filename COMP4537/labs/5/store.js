@@ -48,6 +48,11 @@ class Store {
 		const resultText = document.createElement('h3');
 		resultText.id = 'resultText';
 
+		const link = document.createElement('a');
+		link.setAttribute('href', './search.html')
+		link.textContent = labels.findDefinition;
+
+
 		const inputDiv = document.createElement('div');
 		inputDiv.id = 'inputDiv';
 
@@ -60,6 +65,8 @@ class Store {
 		inputDiv.appendChild(defTextarea);
 		inputDiv.appendChild(button);
 		inputDiv.appendChild(resultDiv);
+		inputDiv.appendChild(link);
+
 		document.body.appendChild(inputDiv);
 	}
 

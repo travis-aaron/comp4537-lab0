@@ -43,15 +43,21 @@ class Search {
 		const resultText = document.createElement('h3');
 		resultText.id = 'resultText';
 
+
 		resultDiv.appendChild(resultText);
 
 
+		// queries for word after 500ms of not typing
 		wordInput.addEventListener('input', () => {
 			clearTimeout(typingTimer);
 			typingTimer = setTimeout(() => {
 				this.getDefinition();
 			}, typingDelay);
 		});
+
+		const link = document.createElement('a');
+		link.setAttribute('href', './store.html')
+		link.textContent = labels.enterDefinition;
 
 		const inputDiv = document.createElement('div');
 		inputDiv.id = 'inputDiv';
@@ -61,13 +67,14 @@ class Search {
 		inputDiv.appendChild(wordInput);
 		inputDiv.appendChild(definitionDiv);
 		inputDiv.appendChild(resultDiv);
+		inputDiv.appendChild(link);
 
 		document.body.appendChild(inputDiv);
 	}
 
 	async getDefinition() {
-		const resultElement = document.getElementById("resultText");
-		const wordInputElement = document.getElementById("findWord");
+		const resultElement = document.getElementById('resultText');
+		const wordInputElement = document.getElementById('findWord');
 		const wordValue = wordInputElement.value;
 
 		if (!this.isValidString(wordValue)) {
