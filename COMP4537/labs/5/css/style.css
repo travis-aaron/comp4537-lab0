@@ -1,0 +1,85 @@
+* {
+	font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
+}
+
+button {
+	background-color: #4a5568;
+	border-radius: .25em;
+	color: #E8E1EF;
+	padding: .5em .75em;
+	font-weight: 500;
+	/* horizontal, vertical, blur, RGBA (black/near transparent) */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+	/* horizontal, vertical, blur, RGBA (black/near transparent) */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body {
+	background-color: #2d3748;
+}
+
+h1 {
+	display: flex;
+	justify-content: center;
+	color: #E8E1EF;
+	align-items: center;
+	padding-top: 1em;
+	text-wrap: balance;
+}
+
+
+label {
+	color: #E8E1EF;
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	align-items: center;
+	gap: 10px;
+}
+
+#inputDiv {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+#inputDiv input[type="text"] {
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#inputDiv button {
+	padding: 10px 30px;
+	cursor: pointer;
+	justify-self: center;
+	margin: 0 auto;
+	display: block;
+}
+
+
+#resultText {
+	color: #E8E1EF;
+}
+
+textarea,
+input {
+	resize: none;
+	background-color: #2d3748;
+	border: 1px solid #E8E1EF;
+	border-radius: .25em;
+	color: #E8E1EF;
+}
+
+textarea::-webkit-scrollbar {
+	background-color: #2d3748;
+	width: .5em;
+}
+
+textarea::-webkit-scrollbar-thumb {
+	background-color: #E8E1EF;
+	border-radius: .25em;
+}
