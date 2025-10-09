@@ -76,7 +76,6 @@ class Search {
 
 	async getDefinition() {
 
-		const response = await fetch(`${GET_URL}{wordValue}`);
 
 		const resultElement = document.getElementById('resultText');
 		const wordInputElement = document.getElementById('findWord');
@@ -86,6 +85,7 @@ class Search {
 			resultElement.innerText = labels.failure;
 		}
 
+		const response = await fetch(`${GET_URL}{wordValue}`);
 		try {
 			const result = await response.json();
 
