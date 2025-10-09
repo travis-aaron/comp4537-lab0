@@ -1,6 +1,6 @@
 import { labels } from './lang/en/en.js';
 
-const GET_URL = 'https://comp-4537-isa-lab4b-production.up.railway.app/api/definitions/?word=$'
+const GET_URL = 'https://comp-4537-isa-lab4b-production.up.railway.app/api/definitions/?word='
 
 class Search {
 
