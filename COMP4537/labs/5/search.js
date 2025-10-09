@@ -85,7 +85,7 @@ class Search {
 			resultElement.innerText = labels.failure;
 		}
 
-		const response = await fetch(`${GET_URL}{wordValue}`);
+		const response = await fetch(`${GET_URL}${wordValue}`);
 		try {
 			const result = await response.json();
 
