@@ -1,6 +1,9 @@
 import { labels } from './lang/en/en.js';
 
+const POST_URL = "https://comp-4537-isa-lab4b-production.up.railway.app/api/definitions"
+
 class Store {
+
 
 	constructor() {
 		this.createDefinitionForm();
@@ -71,7 +74,6 @@ class Store {
 	}
 
 	async postDefinition() {
-		const postUrl = "https://comp-4537-isa-lab4b-production.up.railway.app/api/definitions"
 
 		const resultElement = document.getElementById("resultText");
 		const wordInputElement = document.getElementById("word");
@@ -87,7 +89,7 @@ class Store {
 		}
 
 		try {
-			const response = await fetch(postUrl, {
+			const response = await fetch(POST_URL, {
 				method: "POST",
 				mode: 'cors',
 				headers: {

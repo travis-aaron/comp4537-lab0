@@ -1,5 +1,7 @@
 import { labels } from './lang/en/en.js';
 
+const GET_URL = 'https://comp-4537-isa-lab4b-production.up.railway.app/api/definitions/?word=$'
+
 class Search {
 
 	constructor() {
@@ -73,6 +75,9 @@ class Search {
 	}
 
 	async getDefinition() {
+
+		const response = await fetch(`${GET_URL}{wordValue}`);
+
 		const resultElement = document.getElementById('resultText');
 		const wordInputElement = document.getElementById('findWord');
 		const wordValue = wordInputElement.value;
@@ -82,7 +87,6 @@ class Search {
 		}
 
 		try {
-			const response = await fetch(`https://comp-4537-isa-lab4b-production.up.railway.app/api/definitions/?word=${wordValue}`);
 			const result = await response.json();
 
 			if (response.status !== 200) {
